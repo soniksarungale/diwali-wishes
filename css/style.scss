@@ -1,0 +1,262 @@
+$form_color:#00aa9c;
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: sans-serif;
+}
+body{
+     width: 100%;
+    background-image: url("../img/main-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box{
+        background-color: $form_color;
+        padding: 30px;
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+        color: white;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        .heading{
+            font-size: 22px;
+            margin-bottom: 10px;
+            h1{
+                margin: 0px;
+            }
+        }
+        .description{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            form{
+                margin-bottom: 10px;
+                display: flex;
+                width: calc(100% - 20px);
+                max-width: 500px;
+                input{
+                    border: 2px solid #9100e5;
+                    padding: 12px;
+                    padding-top: 13px;
+                    font-size: 17px;
+                    outline: none;
+                }
+                .user-name{
+                    width: 80%;
+                    border-radius: 6px 0px 0px 6px;
+                    color: black;
+                    letter-spacing: 2px;
+                }
+                .submit{
+                    width: 20%;
+                    background-color: #9100e5;
+                    font-weight: bold;
+                    border-radius: 0px 6px 6px 0px;
+                    cursor: pointer;
+                    color: white;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+.layer{
+    width: 100%;
+    background-color: rgba(0,0,0, 0.5);
+
+}
+.height{    
+    height: 100%;
+}
+h1{
+    font-family: 'Roboto', sans-serif;  
+}
+p{
+    font-family: 'Lato', sans-serif;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    .card{
+        background-image: url("../img/bg.jpg");
+        width: 100%;
+        max-width: 800px;
+        padding: 70px;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .kandil{
+            position: absolute;
+            top: 10px;
+            img{
+                width: 50px;
+                height: auto;
+            }
+        }
+        .left{
+            left: 10px;
+        }
+        .right{
+            right: 10px;
+        }
+        .card-heading{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 40px;
+            color: yellow;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin: 0px;
+        }
+        .diva{
+            margin: 40px 0px;
+            display: flex;
+            justify-content: center;
+        }
+        .card-msg{
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 35px;
+            letter-spacing: 1px;
+        }
+        .from{
+            text-align: right;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+.footer{
+    position: relative;
+    bottom: 0px;
+    background-color: $form_color;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+.footerup{
+    border-bottom: 1px solid black;
+}
+.up{
+    bottom: 30px;
+}
+.absolute{
+    position: absolute;
+}
+.share{
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+
+    .btn{
+        width: 50%;
+        padding: 7px 0px;
+        outline: none;
+        color: white;
+        text-decoration: none;
+        line-height: 40px;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        .text{
+            font-size: 25px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        img{
+            width: 40px;
+        }
+    }
+    .whatsapp{
+        background-color: #4caf50;
+    }
+    .fb{
+        background-color: #3b5998;
+    }
+}
+@media only screen and(max-width: 500px){
+    body{
+        background-image: none;
+        .layer{
+            background-color: black;
+        }
+    }
+    .bg{
+        background-image: url("../img/main-bg.jpg");
+        .layer{
+            background-color: rgba(0,0,0, 0.5);
+        }
+    }
+    .card-body{
+        padding: 0px;
+        .card{
+            padding: 70px 20px;
+            border-radius: 0px;
+            .card-heading{
+                font-size: 30px;
+            }
+            .card-msg{
+                text-align: justify;
+                text-indent: 60px;
+            }
+            .kandil{
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .flex{
+        .box{
+            padding: 30px 15px;
+            border-radius: 0px;
+            margin-bottom: 0px;
+            border-bottom: 1px solid black;
+            .heading{
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            .description{
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            .form{
+                form{
+                    .user-name{
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        letter-spacing: 0px;
+        overflow: hidden;
+    }
+}
