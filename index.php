@@ -47,7 +47,7 @@
         }
     ?>
     <link rel="icon" type="image/png" href="img/diya.gif">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Kalam" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body  <?php if(!$card){echo "class = 'bg'";}?>>
@@ -55,15 +55,17 @@
         <?php
             if($card){
                 if(isset($_GET["go"])){
-        ?>
+                    $sname = preg_replace("/[\s]/", "+", $name);
+        ?>    
             <div class="share">
-                <a href="whatsapp://send?text=<?php echo htmlspecialchars($name);?> Sent You a Special Greating Card For Diwali : http://www.diwali-wishes.cf/?name=<?php echo htmlspecialchars($name)?>" data-action="share/whatsapp/share" class="btn whatsapp">
+                <a href="whatsapp://send?text=<?php echo htmlspecialchars($name);?> Sent You a Special Greating Card For Diwali : http://www.diwali-wishes.cf/?name=<?php echo htmlspecialchars($sname)?>" data-action="share/whatsapp/share" class="btn whatsapp">
                     <div class="text">SHARE</div><img src="img/whatsapp.jpg" alt="Whatsapp">
                 </a>
-                <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.diwali-wishes.cf/?name=<?php echo htmlspecialchars($name)?>" class="btn fb">
+                <a href="http://www.facebook.com/sharer/sharer.php?u=http://www.diwali-wishes.cf/?name=<?php echo htmlspecialchars($sname)?>" class="btn fb">
                     <div class="text">SHARE</div><img src="img/fb.jpg" alt="Face Book">
                 </a>
             </div>
+            <div class="share-height"></div>
         <?php
                 }
         ?>
@@ -72,7 +74,7 @@
                 <div class="kandil left"><img src="img/kandil.jpg" alt="Kandil"></div>
                 <div class="kandil right"><img src="img/kandil.jpg" alt="Kandil"></div>
                 <h1 class="card-heading"><?php echo htmlspecialchars($name);?> WISHES YOU<br>HAPPY DIWALI</h1>
-                <div class="diva"><img src="img/diya.gif" alt="diya"></div>
+                <div class="diva"><img src="img/diya2.gif" alt="diya"></div>
                 <div class="card-msg">
                     <p>
                         I am wishing that the bright lights
@@ -82,6 +84,7 @@
                     </p>
                 </div>
                 <div class="from">- <?php echo htmlspecialchars($name);?></div>
+                <div class="bg-gif"></div>
             </div>
         </div> 
         <?php        
